@@ -24,6 +24,9 @@ Create a fresh django 2.2 project (see the repo) connected to whiskey_mysql
     It breakes in this line https://github.com/ordergroove/data/blob/master/data/main/views.py#L135 sine  user.last_login is null. 
     Checking into database and user has last_login set, I belive the problem is django auth migration `./manage.py sqlmigrate auth 0005` that does `ALTER TABLE `auth_user` MODIFY `last_login` datetime(6) NULL;` that cause old django Datetime field cant be parsed into pytho date correctly.
 
+    *NOTE* It seems django 1.7 is not able to understand datetime(6)  maybe this is related https://docs.djangoproject.com/en/2.2/releases/1.8/#database-backends
+
+
     
 
 
