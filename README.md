@@ -31,6 +31,7 @@ Create a fresh django 2.2 project (see the repo) connected to whiskey_mysql
 ### Comparation after auth_user table after migrate
     
 Before auth_user 
+```
 +--------------+--------------+------+-----+---------+----------------+
 | Field        | Type         | Null | Key | Default | Extra          |
 +--------------+--------------+------+-----+---------+----------------+
@@ -46,9 +47,10 @@ Before auth_user
 | last_login   | datetime(6)  | YES  |     | NULL    |                |
 | date_joined  | datetime     | NO   |     | NULL    |                |
 +--------------+--------------+------+-----+---------+----------------+
-
+```
 
 After migration
+```
 +--------------+--------------+------+-----+---------+----------------+
 | Field        | Type         | Null | Key | Default | Extra          |
 +--------------+--------------+------+-----+---------+----------------+
@@ -64,12 +66,13 @@ After migration
 | last_login   | datetime(6)  | YES  |     | NULL    |                |
 | date_joined  | datetime     | NO   |     | NULL    |                |
 +--------------+--------------+------+-----+---------+----------------+
+```
 
-migrations django to 2.2 
 
 
 ### Migratios from django 1.7 to 2.2
 
+```
 ~/dev/og/ogauth/oauth3/oauth3 (master ✘) [venv]✹✚✭ ᐅ ./manage.py sqlmigrate auth 0002
 BEGIN;
 --
@@ -132,4 +135,5 @@ BEGIN;
 -- Raw Python operation
 --
 COMMIT;
+```
 
